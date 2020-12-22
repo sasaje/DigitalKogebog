@@ -52,21 +52,21 @@ public class SimpleTest {
 
         blankLine();
 
-    Ingredient citron = new Ingredient("Citron", 5);
-    citron.richOnCaloeries();
+        //objects to check methods
+        Ingredient citron = new Ingredient("Citron", 5);
+        citron.richOnCaloeries();
 
-    Ingredient ryeBread = new Ingredient("Rye Bread", 100);
-    ryeBread.richOnCaloeries();
+        Ingredient ryeBread = new Ingredient("Rye Bread", 100);
+        ryeBread.richOnCaloeries();
 
-    Ingredient chocolate = new Ingredient("Chocolate", 105);
-    chocolate.richOnCaloeries();
+        Ingredient chocolate = new Ingredient("Chocolate", 105);
+        chocolate.richOnCaloeries();
 
-    IngredientNutritionContent citron2 = new IngredientNutritionContent("Citron", 22, 2, 2);
-    citron2.goodAgainstColds();
+        IngredientNutritionContent citron2 = new IngredientNutritionContent("Citron", 55, 2, 2);
+        citron2.goodAgainstColds();
 
-    IngredientNutritionContent pølse = new IngredientNutritionContent("Pølse", 0,22,43);
-    pølse.goodAgainstColds();
-
+        IngredientNutritionContent pølse = new IngredientNutritionContent("Pølse", 0,22,43);
+        pølse.goodAgainstColds();
 
     }
     public static void blankLine(){

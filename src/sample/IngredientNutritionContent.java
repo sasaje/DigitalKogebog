@@ -13,19 +13,23 @@ public class IngredientNutritionContent extends Ingredient{
     int magnesium;
     int kalk;
 
-    public IngredientNutritionContent(String name, double calories) {
-        super(name, calories);
-    }
-
     public IngredientNutritionContent(String name, int cVitamin, int magnesium, int kalk) {
         super(name, cVitamin, magnesium, kalk);
+        this.cVitamin = cVitamin;
+        this.magnesium = magnesium;
+        this.kalk = kalk;
     }
 
-    public void goodAgainstColds() {
+    public boolean goodAgainstColds() {
+        boolean result;
+
         if(cVitamin>5) {
+            result = true;
             System.out.println(name + " is good against colds.");
         }else{
+            result = false;
             System.out.println(name + " is not good against colds.");
         }
+        return result;
     }
 }
