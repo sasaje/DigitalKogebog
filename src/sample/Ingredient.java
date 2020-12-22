@@ -8,10 +8,9 @@
 
 package sample;
 
-public class Ingredient implements CaloriesTotal{
+public class Ingredient implements CalorieCalculator {
     String name; //navn
     int calories; //kalorier
-
 
     public String getName() {
         return name;
@@ -21,7 +20,7 @@ public class Ingredient implements CaloriesTotal{
         this.name = name;
     }
 
-    public double getCalories() {
+    public int getCalories() {
         return calories;
     }
 

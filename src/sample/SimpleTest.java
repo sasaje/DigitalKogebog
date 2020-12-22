@@ -68,6 +68,22 @@ public class SimpleTest {
         IngredientNutritionContent pølse = new IngredientNutritionContent("Pølse", 0,22,43);
         pølse.goodAgainstColds();
 
+        Recipe burger = new Recipe();
+        burger.addIngredients("salat", 2);
+        burger.addIngredients("cheese", 52);
+        burger.addIngredients("tomato", 7);
+        burger.addIngredients("beef", 123);
+        burger.addIngredients("mayonaise", 243);
+        burger.addIngredients("bun", 321);
+
+        blankLine();
+        System.out.println("The total calories in a burger is: " + burger.caloriesTotal());
+
+        blankLine();
+        Recipe water = new Recipe();
+        water.addIngredients("water",0);
+        System.out.println("The total calories in a burger is: " + water.caloriesTotal());
+
     }
     public static void blankLine(){
         System.out.println(" ");

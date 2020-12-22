@@ -1,5 +1,5 @@
 package sample;
 
-public interface CaloriesTotal {
+public interface CalorieCalculator {
     int caloriesTotal();
 }

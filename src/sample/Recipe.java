@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import static sample.SimpleTest.blankLine;
 
-public class Recipe implements CaloriesTotal{
+public class Recipe implements CalorieCalculator {
     private String name; //navn
     private String instructions; //fremgangsmåde
     private int numberOfPortions; // antalPortioner
@@ -130,13 +130,24 @@ public class Recipe implements CaloriesTotal{
     }
 
     //Go through a loop for all the ingredients and sum up the total calories in the recipe.
+    //en løkke gennemløbe alle ingredienser, og lægge deres kalorier sammen og returnere det
     @Override
     public int caloriesTotal() {
 
-        for(Ingredient ingredient : IngredientList){
-            int sumOfCalories = 0;
-            System.out.println(getName() + " contains " + sumOfCalories + " totally");
-        }
+        System.out.println("***************************");
+        System.out.println("*    CALORIES IN RECIPE   *");
+        System.out.println("***************************");
 
+        int totalCalories = 0;
+
+        for(Ingredient ingredient : ingredientsList){
+            int currentCaloriesTotal = 0;
+            int currentCaloriesOnItem = ingredient.getCalories();
+            String currentIngredient = ingredient.getName();
+            System.out.println("Calories in " + currentIngredient + " : "  + currentCaloriesOnItem);
+
+            totalCalories += currentCaloriesOnItem;
+        }
+        return totalCalories;
     }
 }
