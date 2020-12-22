@@ -13,6 +13,10 @@ public class Ingredient implements CalorieCalculator {
     int calories; //kalorier
     Diet diet; //Diet
 
+    public Ingredient(int calories) {
+        this.calories = calories;
+    }
+
     public String getName() {
         return name;
     }
