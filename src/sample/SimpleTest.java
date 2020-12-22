@@ -68,6 +68,7 @@ public class SimpleTest {
 //    pølse.goodAgainstColds();
 
 
+
     }
     public static void blankLine(){
         System.out.println(" ");
