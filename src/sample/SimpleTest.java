@@ -8,7 +8,7 @@ package sample;/*
 
 import java.util.ArrayList;
 
-public class SimpleTest{
+public class SimpleTest {
 
     public static void main(String[] args) {
         System.out.println("Welcome to 'The Kogebog' your digital recipes.");
@@ -21,43 +21,51 @@ public class SimpleTest{
 //        CookingTime glasurCookingTime = new CookingTime(0,20);
         glasurRecipe.setCookingTime("20 minutter");
 
-        ArrayList<Ingredient> glasurIngredientsList = new ArrayList<>();
+        ArrayList<Ingredient> glasurList = new ArrayList<>();
         Ingredient glasurIngredientsSugar = new Ingredient("Vand", 3);
         Ingredient glasurIngredientsWater = new Ingredient("Flormelis", 100);
-        glasurIngredientsList.add(glasurIngredientsSugar); //adds the ingredient to the glasurIngredientsList
-        glasurIngredientsList.add(glasurIngredientsWater); //adds the ingredient to the glasurIngredientsList
-        ArrayList<Ingredient> glasurList = new ArrayList<>();
         //add ingredients to list
         glasurList.add(glasurIngredientsSugar);
         glasurList.add(glasurIngredientsWater);
         glasurRecipe.setIngredientsList(glasurList);
 
-        ArrayList<Ingredient> teIngredientsList = new ArrayList<>();
+        System.out.println("name: " + glasurRecipe.getName() + " "
+                + ", instructions: " + glasurRecipe.getInstructions() + " "
+                + ", numberofportions: " + glasurRecipe.getNumberOfPortions() + " "
+                + ", cookingTime: " + glasurRecipe.getCookingTime() + " "
+                + ", ingrediens: " + glasurRecipe.getIngredientsList().toString());
+
+        //declare the Recipe objects
+        Recipe teRecipe = new Recipe();
+        teRecipe.setName("TeOpskrift");
+        teRecipe.setInstructions("This is how you do it.");
+        teRecipe.setNumberOfPortions(2);
+        teRecipe.setCookingTime("15 minutter");
+
+        ArrayList<Ingredient> teList = new ArrayList<>();
         Ingredient teIngredientsSugar = new Ingredient("Vand", 0);
         Ingredient teIngredientsWater = new Ingredient("Tebrev", 5);
         Ingredient teIngredientsMelis = new Ingredient("Flormelis", 200);
-        teIngredientsList.add(glasurIngredientsSugar); //adds the ingredient to the glasurIngredientsList
-        teIngredientsList.add(glasurIngredientsWater); //adds the ingredient to the glasurIngredientsList
-        ArrayList<Ingredient> teList = new ArrayList<>();
         //add ingredients to list
-        teList.add(glasurIngredientsSugar);
-        teList.add(glasurIngredientsWater);
-        glasurRecipe.setIngredientsList(teList);
+        teList.add(teIngredientsSugar);
+        teList.add(teIngredientsWater);
+        teList.add(teIngredientsMelis);
+        teRecipe.setIngredientsList(teList);
 
         //display data using arrayList
-        for(Ingredient ingredient : teList){
+        for (Ingredient ingredient : teList) {
             System.out.println("IngredientName: " + ingredient.name);
             System.out.println("IngredientCalories: " + ingredient.calories);
             System.out.println("-------------------");
         }
 
-        System.out.println("name: " + glasurRecipe.getName() + " "
-                + ", name: " + glasurRecipe.getInstructions() + " "
-                + ", numberofportions: " + glasurRecipe.getNumberOfPortions() + " "
-                + ", cookingTime: " +glasurRecipe.getCookingTime() + " "
-                + ", ingrediens: " + glasurRecipe.getIngredientsList().toString());
-
+        System.out.println("name: " + teRecipe.getName() + " "
+                + ", name: " + teRecipe.getInstructions() + " "
+                + ", numberofportions: " + teRecipe.getNumberOfPortions() + " "
+                + ", cookingTime: " + teRecipe.getCookingTime() + " "
+                + ", ingrediens: " + teRecipe.getIngredientsList().toString());
     }
+
 
     public void blankLine(){
         System.out.println("\n");
