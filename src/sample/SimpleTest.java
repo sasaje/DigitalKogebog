@@ -61,8 +61,6 @@ public class SimpleTest {
 
         System.out.println("-------------------");
 
-        System.out.println("THIS" + teList.toString());
-
         System.out.println("name: " + teRecipe.getName() + " "
                 + ", name: " + teRecipe.getInstructions() + " "
                 + ", numberofportions: " + teRecipe.getNumberOfPortions() + " "
