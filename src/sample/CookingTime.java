@@ -8,6 +8,7 @@
 
 package sample;
 
+//EXAMPLE CUSTOM DATA TYPE
 public class CookingTime extends Recipe{
     private int hours;
     private int minutes;

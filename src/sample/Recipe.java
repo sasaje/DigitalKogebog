@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import static sample.SimpleTest.blankLine;
 
+//EXAMPLE VARIABLES, INTERFACE IMPLEMENTATION
 public class Recipe implements CalorieCalculator {
     private String name; //navn
     private String instructions; //fremgangsmåde
@@ -20,6 +21,8 @@ public class Recipe implements CalorieCalculator {
     private String cookingTime; //tilberedningstid
     private ArrayList<Ingredient> ingredientsList = new ArrayList<>(); //ingredienser
 
+
+//EXAMPLE GETTERS AND SETTERS
     public String getName() {
         return name;
     }
@@ -52,6 +55,7 @@ public class Recipe implements CalorieCalculator {
         this.cookingTime = cookingTime;
     }
 
+//EXAMPLE ARRAYLIST
     public ArrayList<Ingredient> getIngredientsList() {
         return ingredientsList;
     }
@@ -65,6 +69,7 @@ public class Recipe implements CalorieCalculator {
         //empty constructor
     }
 
+//EXAMPLE CONSTRUCTORS
     public Recipe(String name, String instructions, int numberOfPortions, String cookingTime) {
         this.name = name;
         this.instructions = instructions;
@@ -81,6 +86,7 @@ public class Recipe implements CalorieCalculator {
         System.out.println("Recipe added: " + name);
     }
 
+//EXAMPLE OVERRIDING TOSTRING() //TODO override toString() get it to work
     //not working
     public String toString(){
         StringBuilder sb = new StringBuilder();
@@ -96,9 +102,10 @@ public class Recipe implements CalorieCalculator {
 
     //addIngredients method
     public void addIngrediens(Ingredient ingredient){
-
+        //?
     }
 
+//EXAMPLE ADD INGREDIENTS TO ARRAYLIST
     //addIngredients method
     public void addIngredients(String name, int calories){
         ingredientsList.add(new Ingredient(name, calories));
@@ -107,6 +114,7 @@ public class Recipe implements CalorieCalculator {
 //        System.out.println(ingredientsList.toString()); //TODO toString() still not working
     }
 
+//EXAMPLE DISPLAY ARRAYLIST ITEMS
     public void showIngrediens(){
         System.out.println("Ingredients you need to make " + name + ":");
         for(int i = 0; i < ingredientsList.size(); i++){
@@ -122,6 +130,7 @@ public class Recipe implements CalorieCalculator {
         System.out.println("- " + currentInstructions);
     }
 
+//EXAMPLE EXTRACT METHODS TO ANOTHER METHOD
     //showRecipe instructions and ingredient together.
     public void showRecipe(){
         showIngrediens();
@@ -129,6 +138,7 @@ public class Recipe implements CalorieCalculator {
         showInstructions();
     }
 
+//EXAMPLE METHODS FROM INTERFACE IMPLEMENTATION
     //Go through a loop for all the ingredients and sum up the total calories in the recipe.
     @Override
     public int caloriesTotal() {
@@ -139,6 +149,7 @@ public class Recipe implements CalorieCalculator {
 
         int totalCalories = 0;
 
+//EXAMPLE FOR-EACH LOOP
         for(Ingredient ingredient : ingredientsList){
             int currentCaloriesTotal = 0;
             int currentCaloriesOnItem = ingredient.getCalories();
@@ -166,5 +177,4 @@ public class Recipe implements CalorieCalculator {
 
         return result;
     }
-
 }

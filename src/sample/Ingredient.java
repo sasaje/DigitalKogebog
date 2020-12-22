@@ -49,6 +49,7 @@ public class Ingredient implements CalorieCalculator {
         this.name = name;
     }
 
+//EXAMPLE FOR-LOOP
     public boolean richOnCaloeries(){
         boolean result;
         if(getCalories()>=100) {
@@ -61,6 +62,7 @@ public class Ingredient implements CalorieCalculator {
         return result;
     }
 
+//EXAMPLE METHODS FROM INTERFACE IMPLEMENTATION
     //Return calories in the ingredient
     @Override
     public int caloriesTotal() {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//EXAMPLE JUNIT TESTING
 class RecipeTest {
 
     @org.junit.jupiter.api.Test
