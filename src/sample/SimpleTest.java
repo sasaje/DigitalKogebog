@@ -12,4 +12,10 @@ public class SimpleTest {
     public static void main(String[] args) {
         System.out.println("Welcome to 'The Kogebog' your digital recipes.");
     }
+
+    //2. help method blankLine()
+    public void blankLine(){
+        System.out.println("\n");
+    }
+
 }
