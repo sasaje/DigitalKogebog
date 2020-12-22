@@ -59,11 +59,12 @@ public class SimpleTest {
     Ingredient chocolate = new Ingredient("Chocolate", 105);
     chocolate.richOnCaloeries();
 
-
     Ingredient citron2 = new Ingredient("Citron", 22, 2, 2);
-    chocolate.richOnCaloeries();
+    citron2.goodAgainstColds();
 
     Ingredient pølse = new Ingredient("Pølse", 0,22,43);
+    pølse.goodAgainstColds();
+
 
     }
     public static void blankLine(){

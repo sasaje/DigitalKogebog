@@ -17,15 +17,11 @@ public class ingredientNutritionContent extends Ingredient{
         super(name, calories);
     }
 
-    public boolean goodAgainstColds(String name, int cVitamin, int magnesium, int kalk) {
-        boolean result;
+    public void goodAgainstColds(String name, int cVitamin, int magnesium, int kalk) {
         if(cVitamin>5) {
             System.out.println(name + " is good against colds.");
-            result = true;
         }else{
             System.out.println(name + " is not good against colds.");
-            result = false;
         }
-        return result;
     }
 }

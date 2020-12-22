@@ -8,7 +8,7 @@
 
 package sample;
 
-public class Ingredient {
+public class Ingredient{
     String name; //navn
     double calories; //kalorier
 

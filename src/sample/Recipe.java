@@ -60,8 +60,6 @@ public class Recipe {
         this.ingredientsList = ingredientsList;
     }
 
-
-
     //Constructors
     public Recipe(){
         //empty constructor
