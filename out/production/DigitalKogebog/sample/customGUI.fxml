@@ -32,7 +32,7 @@
                                         <Font name="American Typewriter" size="13.0" />
                                     </font>
                                 </Button>
-                                <TextField fx:id="recipeNameTextField" layoutX="24.0" layoutY="83.0" prefHeight="27.0" prefWidth="151.0" promptText="Inspiration Name" style="-fx-background-color: #ffff; -fx-padding: 0;">
+                                <TextField fx:id="recipeNameTextField" layoutX="24.0" layoutY="83.0" prefHeight="27.0" prefWidth="151.0" style="-fx-background-color: #ffff; -fx-padding: 0;">
                                     <font>
                                         <Font name="American Typewriter" size="15.0" />
                                     </font>

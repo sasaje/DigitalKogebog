@@ -22,7 +22,6 @@ public class SimpleTest {
         //declare the Recipe objects
         Recipe glasurRecipe = new Recipe("GlasurOpskrift", "This is how you make glasur.", 2, "20 minutes");
 
-        ArrayList<Ingredient> ingredientArrayList = new ArrayList<>(); //an arrayList for the ingredients - reuse for all ingredient declarations to the recipes
         glasurRecipe.addIngredients("Powdered sugar", 100); //adds ingredients to arrayList
         glasurRecipe.addIngredients("Water", 0);
 

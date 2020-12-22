@@ -9,6 +9,7 @@
 package sample;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static sample.SimpleTest.blankLine;
 
@@ -21,8 +22,7 @@ public class Recipe implements CalorieCalculator {
     private String cookingTime; //tilberedningstid
     private ArrayList<Ingredient> ingredientsList = new ArrayList<>(); //ingredienser
 
-
-//EXAMPLE GETTERS AND SETTERS
+    //EXAMPLE GETTERS AND SETTERS
     public String getName() {
         return name;
     }
@@ -55,7 +55,7 @@ public class Recipe implements CalorieCalculator {
         this.cookingTime = cookingTime;
     }
 
-//EXAMPLE ARRAYLIST
+    //EXAMPLE ARRAYLIST
     public ArrayList<Ingredient> getIngredientsList() {
         return ingredientsList;
     }
@@ -86,15 +86,6 @@ public class Recipe implements CalorieCalculator {
         System.out.println("Recipe added: " + name);
     }
 
-//EXAMPLE OVERRIDING TOSTRING() //TODO override toString() get it to work
-    //not working
-
-    @Override
-    public String toString() {
-        return ingredientsList.toString();
-    }
-
-
     public int numberOfIngrediens(){
         // This will print the size of the stock list
         int numberOfingrediens = ingredientsList.size();
@@ -103,7 +94,7 @@ public class Recipe implements CalorieCalculator {
 
     //addIngredients method
     public void addIngrediens(Ingredient ingredient){
-        //?
+        //what to do here?
     }
 
 //EXAMPLE ADD INGREDIENTS TO ARRAYLIST
@@ -111,12 +102,14 @@ public class Recipe implements CalorieCalculator {
     public void addIngredients(String name, int calories){
         ingredientsList.add(new Ingredient(name, calories));
 
-//        System.out.println("Now the IngredientList looks like this: ");
-//        System.out.println(ingredientsList.toString()); // TODO toString() still not working
+        //removes the [] from the arrayList output
+/*        String asString = this.getIngredientsList().toString().replaceAll("^\\[", "").replaceAll("\\]$", "").replace(",", "");
+        System.out.println("Current ingredientList: " + asString); //toString() not working
+        System.out.println(asString);*/
     }
 
 //EXAMPLE DISPLAY ARRAYLIST ITEMS
-    public void showIngrediens(){
+    public void showIngredients(){
         System.out.println("Ingredients you need to make " + name + ":");
         for(int i = 0; i < ingredientsList.size(); i++){
             int x=i+1;
@@ -126,7 +119,7 @@ public class Recipe implements CalorieCalculator {
 
     //GUI method only - shows the ingredients in GUI
     public void showIngredientsGUI(){
-        ingredientsList.forEach(t -> System.out.println(t));
+        ingredientsList.forEach(System.out::println);
     }
 
     //show instructions
@@ -145,7 +138,7 @@ public class Recipe implements CalorieCalculator {
 //EXAMPLE EXTRACT METHODS TO ANOTHER METHOD
     //showRecipe instructions and ingredient together.
     public void showRecipe(){
-        showIngrediens();
+        showIngredients();
         blankLine(); //imported from SampleTest
         showInstructions();
     }
@@ -154,7 +147,6 @@ public class Recipe implements CalorieCalculator {
     //Go through a loop for all the ingredients and sum up the total calories in the recipe.
     @Override
     public int caloriesTotal() {
-
         System.out.println("***************************");
         System.out.println("*    CALORIES IN RECIPE   *");
         System.out.println("***************************");
@@ -173,6 +165,7 @@ public class Recipe implements CalorieCalculator {
         return totalCalories;
     }
 
+//EXAMPLE EXCEPTION TRY-CATCH
     public int caloriesPerPortion(){
         int result = 0;
 
@@ -189,6 +182,4 @@ public class Recipe implements CalorieCalculator {
 
         return result;
     }
-
-
 }
