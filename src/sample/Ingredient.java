@@ -27,4 +27,14 @@ public class Ingredient {
     public void setCalories(double calories) {
         this.calories = calories;
     }
+
+    public void setIngredient(String name, double calories) {
+        this.name = name;
+        this.calories = calories;
+    }
+
+    public Ingredient(String name, double calories) {
+        this.name = name;
+        this.calories = calories;
+    }
 }
