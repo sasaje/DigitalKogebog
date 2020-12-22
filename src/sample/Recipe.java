@@ -111,7 +111,7 @@ public class Recipe implements CalorieCalculator {
         ingredientsList.add(new Ingredient(name, calories));
 
 //        System.out.println("Now the IngredientList looks like this: ");
-//        System.out.println(ingredientsList.toString()); //TODO toString() still not working
+//        System.out.println(ingredientsList.toString()); // TODO toString() still not working
     }
 
 //EXAMPLE DISPLAY ARRAYLIST ITEMS

@@ -21,4 +21,4 @@ Algorithms: Example of search or sorting
 11. Documentation and version control
 
 The comments covering the pensum subjects are marked as follows:
-//EXAMPLE OF COMMENT IN PROGRAM
+//EXAMPLE OF COMMENT IN PROGRAM. Find them in the TODO section in IntelliJ
