@@ -22,3 +22,9 @@ Algorithms: Example of search or sorting
 
 The comments covering the pensum subjects are marked as follows:
 //EXAMPLE OF COMMENT IN PROGRAM. Find them in the TODO section in IntelliJ
+
+Simple GUI added to the project as well
+
+<img src="https://github.com/sasaje/DigitalKogebog/blob/master/src/previewGUI/simpleGUI.png" height="300" width="400">
+
+
