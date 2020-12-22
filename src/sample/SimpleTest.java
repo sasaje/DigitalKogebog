@@ -50,6 +50,8 @@ public class SimpleTest {
 
         teRecipe.showRecipe();
 
+        blankLine();
+
     Ingredient citron = new Ingredient("Citron", 5);
     citron.richOnCaloeries();
 
@@ -60,10 +62,10 @@ public class SimpleTest {
     chocolate.richOnCaloeries();
 
     Ingredient citron2 = new Ingredient("Citron", 22, 2, 2);
-    citron2.goodAgainstColds();
+//    citron2.goodAgainstColds();
 
     Ingredient pølse = new Ingredient("Pølse", 0,22,43);
-    pølse.goodAgainstColds();
+//    pølse.goodAgainstColds();
 
 
     }
