@@ -96,26 +96,22 @@ public class Recipe {
 
     //addIngredients method
     public void addIngrediens(Ingredient ingredient){
-        return ingredientsList.add(ingredient);
+
     }
+
     //addIngredients method
     public void addIngredients(String name, int calories){
         ingredientsList.add(new Ingredient(name, calories));
-        for (Ingredient ingredient : ingredientsList) {
-            ingredientsList.add(new Ingredient(name, calories));
 
-            System.out.println("For every item in the list this is added");
-        }
+//        System.out.println("Now the IngredientList looks like this: ");
+//        System.out.println(ingredientsList.toString()); //TODO toString() not working
     }
 
-    public void showIngrediens(ArrayList<Ingredient> ingredientsList){
-        for (Ingredient ingredient : ingredientsList) {
-//            System.out.println("Ingredient: " + ingredient.name + " (Calories: " + ingredient.calories + ")");
-        }
-
+    public void showIngrediens(){
+        System.out.println("Ingrediens you nedd to make " + name + ":");
         for(int i = 0; i < ingredientsList.size(); i++){
             int x=i+1;
-            System.out.println("Ingredient(" + x + "): " + ingredientsList.get(i).getClass().getSimpleName());
+            System.out.println("Ingredient(" + x + "): " + ingredientsList.get(i));
         }
     }
 }
