@@ -88,5 +88,34 @@ public class Recipe {
         return sb.toString();
     }
 
+    public int numberOfIngrediens(){
+        // This will print the size of the stock list
+        int numberOfingrediens = ingredientsList.size();
+        return numberOfingrediens;
+    }
 
+    //addIngredients method
+    public void addIngrediens(Ingredient ingredient){
+        return ingredientsList.add(ingredient);
+    }
+    //addIngredients method
+    public void addIngredients(String name, int calories){
+        ingredientsList.add(new Ingredient(name, calories));
+        for (Ingredient ingredient : ingredientsList) {
+            ingredientsList.add(new Ingredient(name, calories));
+
+            System.out.println("For every item in the list this is added");
+        }
+    }
+
+    public void showIngrediens(ArrayList<Ingredient> ingredientsList){
+        for (Ingredient ingredient : ingredientsList) {
+//            System.out.println("Ingredient: " + ingredient.name + " (Calories: " + ingredient.calories + ")");
+        }
+
+        for(int i = 0; i < ingredientsList.size(); i++){
+            int x=i+1;
+            System.out.println("Ingredient(" + x + "): " + ingredientsList.get(i).getClass().getSimpleName());
+        }
+    }
 }
