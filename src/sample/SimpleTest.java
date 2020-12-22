@@ -31,11 +31,11 @@ public class SimpleTest {
         glasurList.add(glasurIngredientsWater);
         glasurRecipe.setIngredientsList(glasurList);
 
-        System.out.println("name: " + glasurRecipe.getName() + " "
-                + ", instructions: " + glasurRecipe.getInstructions() + " "
-                + ", numberofportions: " + glasurRecipe.getNumberOfPortions() + " "
-                + ", cookingTime: " + glasurRecipe.getCookingTime() + " "
-                + ", ingrediens: " + glasurRecipe.getIngredientsList().toString());
+        System.out.println("Name: " + glasurRecipe.getName() + " "
+                + ", Instructions: " + glasurRecipe.getInstructions() + " "
+                + ", Numberofportions: " + glasurRecipe.getNumberOfPortions() + " "
+                + ", CookingTime: " + glasurRecipe.getCookingTime() + " "
+                + ", Ingrediens: " + glasurRecipe.getIngredientsList().toString());
 
         //declare the Recipe objects
         Recipe teRecipe = new Recipe();
@@ -61,11 +61,11 @@ public class SimpleTest {
 
         System.out.println("-------------------");
 
-        System.out.println("name: " + teRecipe.getName() + " "
-                + ", name: " + teRecipe.getInstructions() + " "
-                + ", numberofportions: " + teRecipe.getNumberOfPortions() + " "
-                + ", cookingTime: " + teRecipe.getCookingTime() + " "
-                + ", ingrediens: " + teRecipe.getIngredientsList().toString());
+        System.out.println("Name: " + teRecipe.getName() + " "
+                + ", Instructions: " + teRecipe.getInstructions() + " "
+                + ", Numberofportions: " + teRecipe.getNumberOfPortions() + " "
+                + ", CookingTime: " + teRecipe.getCookingTime() + " "
+                + ", Ingrediens: " + teRecipe.getIngredientsList().toString());
     }
 
     public static void blankLine(){
