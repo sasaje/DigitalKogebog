@@ -104,7 +104,7 @@ public class Recipe {
         ingredientsList.add(new Ingredient(name, calories));
 
 //        System.out.println("Now the IngredientList looks like this: ");
-//        System.out.println(ingredientsList.toString()); //TODO toString() not working
+//        System.out.println(ingredientsList.toString()); //TODO toString() still not working
     }
 
     public void showIngrediens(){
@@ -113,5 +113,12 @@ public class Recipe {
             int x=i+1;
             System.out.println("Ingredient(" + x + "): " + ingredientsList.get(i));
         }
+    }
+
+    //show instructions
+    public void showInstructions(){
+        System.out.println("The instructions for making " + name + ":");
+        String currentInstructions = this.getInstructions();
+        System.out.println("- " + currentInstructions);
     }
 }

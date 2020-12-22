@@ -16,7 +16,7 @@ public class SimpleTest {
         blankLine();
 
         //declare the Recipe objects
-        Recipe glasurRecipe = new Recipe("GlasurOpskrift", "This is how you do it.", 2, "20 minutes");
+        Recipe glasurRecipe = new Recipe("GlasurOpskrift", "This is how you make glasur.", 2, "20 minutes");
 
         ArrayList<Ingredient> ingredientArrayList = new ArrayList<>(); //reuse for all ingredient declarations
         glasurRecipe.addIngredients("Powdered sugar", 100);
@@ -27,8 +27,12 @@ public class SimpleTest {
 
         blankLine();
 
+        glasurRecipe.showInstructions();
+
+        blankLine();
+
         //declare the Recipe objects
-        Recipe teRecipe = new Recipe("TeOpskrift", "This is how you do it.", 1, "15 minutes");
+        Recipe teRecipe = new Recipe("TeOpskrift", "This is how you make tea.", 1, "15 minutes");
 
         teRecipe.addIngredients("Sugar", 100);
         teRecipe.addIngredients("Citron", 7);
@@ -38,6 +42,12 @@ public class SimpleTest {
         blankLine();
 
         teRecipe.showIngrediens();
+
+        blankLine();
+
+        teRecipe.showInstructions();
+
+        blankLine();
 
         //display data from arrayList
 /*        for (Ingredient ingredient : teList) {
