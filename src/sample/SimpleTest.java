@@ -23,12 +23,15 @@ public class SimpleTest {
         glasurRecipe.addIngredients("Water", 0);
 
         blankLine();
-        glasurRecipe.showIngrediens();
+    /*    glasurRecipe.showIngrediens();
+        blankLine();
+        glasurRecipe.showInstructions();
+        blankLine();*/
+
+        glasurRecipe.showRecipe();
 
         blankLine();
-
-        glasurRecipe.showInstructions();
-
+        System.out.println("/***********/");
         blankLine();
 
         //declare the Recipe objects
@@ -37,17 +40,17 @@ public class SimpleTest {
         teRecipe.addIngredients("Sugar", 100);
         teRecipe.addIngredients("Citron", 7);
         teRecipe.addIngredients("Water", 0);
-        teRecipe.addIngredients("Tea", 4);
+        teRecipe.addIngredients("Tea Bag", 4);
 
         blankLine();
-
-        teRecipe.showIngrediens();
-
+    /*    teRecipe.showIngrediens();
         blankLine();
-
         teRecipe.showInstructions();
+        blankLine();*/
 
-        blankLine();
+        teRecipe.showRecipe();
+
+
 
         //display data from arrayList
 /*        for (Ingredient ingredient : teList) {

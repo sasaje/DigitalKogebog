@@ -10,6 +10,8 @@ package sample;
 
 import java.util.ArrayList;
 
+import static sample.SimpleTest.blankLine;
+
 public class Recipe {
     private String name; //navn
     private String instructions; //fremgangsmåde
@@ -108,7 +110,7 @@ public class Recipe {
     }
 
     public void showIngrediens(){
-        System.out.println("Ingrediens you nedd to make " + name + ":");
+        System.out.println("Ingredients you need to make " + name + ":");
         for(int i = 0; i < ingredientsList.size(); i++){
             int x=i+1;
             System.out.println("Ingredient(" + x + "): " + ingredientsList.get(i));
@@ -120,5 +122,12 @@ public class Recipe {
         System.out.println("The instructions for making " + name + ":");
         String currentInstructions = this.getInstructions();
         System.out.println("- " + currentInstructions);
+    }
+
+    //showRecipe instructions and ingredient together.
+    public void showRecipe(){
+        showIngrediens();
+        blankLine(); //imported from SampleTest
+        showInstructions();
     }
 }
