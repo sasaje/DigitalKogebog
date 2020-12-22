@@ -8,9 +8,9 @@
 
 package sample;
 
-public class Ingredient {
+public class Ingredient implements CaloriesTotal{
     String name; //navn
-    double calories; //kalorier
+    int calories; //kalorier
 
 
     public String getName() {
@@ -25,16 +25,16 @@ public class Ingredient {
         return calories;
     }
 
-    public void setCalories(double calories) {
+    public void setCalories(int calories) {
         this.calories = calories;
     }
 
-    public void setIngredient(String name, double calories) {
+    public void setIngredient(String name, int calories) {
         this.name = name;
         this.calories = calories;
     }
 
-    public Ingredient(String name, double calories) {
+    public Ingredient(String name, int calories) {
         this.name = name;
         this.calories = calories;
 
@@ -55,5 +55,11 @@ public class Ingredient {
             result = false;
         }
         return result;
+    }
+
+    //Return calories in the ingredient
+    @Override
+    public int caloriesTotal() {
+        return calories;
     }
 }
