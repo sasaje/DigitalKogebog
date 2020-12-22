@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffff;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="inspirationGalleryTab" style="-fx-background-color: #ffff; -fx-background-radius: 0;" text="Glasur recipe">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                        <Label layoutX="24.0" layoutY="20.0" text="'The Kogebog'">
+                           <font>
+                              <Font name="American Typewriter" size="25.0" />
+                           </font>
+                        </Label>
+                                <Label layoutX="24.0" layoutY="59.0" text="Opskrift:">
+                                    <font>
+                                        <Font name="American Typewriter" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="showRecipeButton" layoutX="26.0" layoutY="309.0" mnemonicParsing="false" onAction="#showRecipe" prefHeight="32.0" prefWidth="148.0" style="-fx-background-color: #00eda0; -fx-background-radius: 0;" text="Show recipe">
+                                    <font>
+                                        <Font name="American Typewriter" size="13.0" />
+                                    </font>
+                                </Button>
+                                <TextField fx:id="recipeNameTextField" layoutX="24.0" layoutY="83.0" prefHeight="27.0" prefWidth="151.0" promptText="Inspiration Name" style="-fx-background-color: #ffff;">
+                                    <font>
+                                        <Font name="American Typewriter" size="13.0" />
+                                    </font>
+                                </TextField>
+                        <Label fx:id="chosen" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="341.0" opacity="0.0" prefHeight="18.0" prefWidth="576.0" text="show added imageFilePath" textAlignment="RIGHT" textFill="#2b5079">
+                           <font>
+                              <Font name="Bodoni 72 Oldstyle Book" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="252.0" layoutY="27.0" text="Ingredients:">
+                           <font>
+                              <Font name="American Typewriter" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="252.0" layoutY="166.0" text="Instructions:">
+                           <font>
+                              <Font name="American Typewriter" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="ingredientsTextArea" layoutX="252.0" layoutY="51.0" prefHeight="95.0" prefWidth="325.0" />
+                        <TextArea fx:id="instructionsTextArea" layoutX="252.0" layoutY="192.0" prefHeight="150.0" prefWidth="325.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
