@@ -50,7 +50,14 @@ public class SimpleTest {
 
         teRecipe.showRecipe();
 
+    Ingredient citron = new Ingredient("Citron", 5);
+    citron.richOnCaloeries();
 
+    Ingredient ryeBread = new Ingredient("Rye Bread", 100);
+    ryeBread.richOnCaloeries();
+
+    Ingredient chocolate = new Ingredient("Chocolate", 105);
+    chocolate.richOnCaloeries();
 
         //display data from arrayList
 /*        for (Ingredient ingredient : teList) {
