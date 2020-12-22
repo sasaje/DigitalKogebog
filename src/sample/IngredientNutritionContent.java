@@ -8,6 +8,7 @@
 
 package sample;
 
+//EXAMPLE INHERITANCE
 public class IngredientNutritionContent extends Ingredient{
     int cVitamin;
     int magnesium;
