@@ -8,16 +8,20 @@
 
 package sample;
 
-public class ingredientNutritionContent extends Ingredient{
+public class IngredientNutritionContent extends Ingredient{
     int cVitamin;
     int magnesium;
     int kalk;
 
-    public ingredientNutritionContent(String name, double calories) {
+    public IngredientNutritionContent(String name, double calories) {
         super(name, calories);
     }
 
-    public void goodAgainstColds(String name, int cVitamin, int magnesium, int kalk) {
+    public IngredientNutritionContent(String name, int cVitamin, int magnesium, int kalk) {
+        super(name, cVitamin, magnesium, kalk);
+    }
+
+    public void goodAgainstColds() {
         if(cVitamin>5) {
             System.out.println(name + " is good against colds.");
         }else{
