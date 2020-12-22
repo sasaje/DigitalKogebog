@@ -130,7 +130,6 @@ public class Recipe implements CalorieCalculator {
     }
 
     //Go through a loop for all the ingredients and sum up the total calories in the recipe.
-    //en løkke gennemløbe alle ingredienser, og lægge deres kalorier sammen og returnere det
     @Override
     public int caloriesTotal() {
 
