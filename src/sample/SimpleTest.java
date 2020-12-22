@@ -59,10 +59,12 @@ public class SimpleTest {
     Ingredient chocolate = new Ingredient("Chocolate", 105);
     chocolate.richOnCaloeries();
 
-        //display data from arrayList
-/*        for (Ingredient ingredient : teList) {
-            System.out.println("Ingredient: " + ingredient.name + " (Calories: " + ingredient.calories + ")");
-        }*/
+
+    Ingredient citron2 = new Ingredient("Citron", 22, 2, 2);
+    chocolate.richOnCaloeries();
+
+    Ingredient pølse = new Ingredient("Pølse", 0,22,43);
+
     }
     public static void blankLine(){
         System.out.println(" ");

@@ -12,6 +12,7 @@ public class Ingredient {
     String name; //navn
     double calories; //kalorier
 
+
     public String getName() {
         return name;
     }
@@ -38,6 +39,10 @@ public class Ingredient {
         this.calories = calories;
 
         System.out.println("Ingredient added: " + name);
+    }
+
+    public Ingredient(String name, int cVitamin, int magnesium, int kalk) {
+        this.name = name;
     }
 
     public boolean richOnCaloeries(){
