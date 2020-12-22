@@ -63,18 +63,25 @@ public class Recipe {
     //Constructors
     public Recipe(){
         //empty constructor
-//        System.out.println("Recipe " + name + " is added to the Kogebog");
     }
 
+    public Recipe(String name, String instructions, int numberOfPortions, String cookingTime) {
+        this.name = name;
+        this.instructions = instructions;
+        this.numberOfPortions = numberOfPortions;
+        this.cookingTime = cookingTime;
+        System.out.println("Recipe added: " + name);
+    }
     public Recipe(String name, String instructions, int numberOfPortions, String cookingTime, ArrayList<Ingredient> ingredientsList) {
         this.name = name;
         this.instructions = instructions;
         this.numberOfPortions = numberOfPortions;
         this.cookingTime = cookingTime;
         this.ingredientsList = ingredientsList;
-        System.out.println("Recipe " + name + " is added to the Kogebog");
+        System.out.println("Recipe added: " + name);
     }
 
+    //not working
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append("ArrayList").append(this.ingredientsList).append("\n");

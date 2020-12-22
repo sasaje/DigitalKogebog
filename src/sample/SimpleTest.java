@@ -16,12 +16,7 @@ public class SimpleTest {
         blankLine();
 
         //declare the Recipe objects
-        Recipe glasurRecipe = new Recipe();
-        glasurRecipe.setName("GlasurOpskrift");
-        glasurRecipe.setInstructions("This is how you do it.");
-        glasurRecipe.setNumberOfPortions(2);
-//        CookingTime glasurCookingTime = new CookingTime(0,20);
-        glasurRecipe.setCookingTime("20 minutter");
+        Recipe glasurRecipe = new Recipe("GlasurOpskrift", "This is how you do it.", 2, "20 minutes");
 
         ArrayList<Ingredient> glasurList = new ArrayList<>();
         Ingredient glasurIngredientsSugar = new Ingredient("Vand", 3);
@@ -31,18 +26,15 @@ public class SimpleTest {
         glasurList.add(glasurIngredientsWater);
         glasurRecipe.setIngredientsList(glasurList);
 
-        System.out.println("Name: " + glasurRecipe.getName() + " "
-                + ", Instructions: " + glasurRecipe.getInstructions() + " "
-                + ", Numberofportions: " + glasurRecipe.getNumberOfPortions() + " "
-                + ", CookingTime: " + glasurRecipe.getCookingTime() + " "
-                + ", Ingrediens: " + glasurRecipe.getIngredientsList().toString());
+        //display data using arrayList
+        for (Ingredient ingredient : glasurList) {
+            System.out.println("Ingredient: " + ingredient.name + " (Calories: " + ingredient.calories + ")");
+        }
+
+        blankLine();
 
         //declare the Recipe objects
-        Recipe teRecipe = new Recipe();
-        teRecipe.setName("TeOpskrift");
-        teRecipe.setInstructions("This is how you do it.");
-        teRecipe.setNumberOfPortions(2);
-        teRecipe.setCookingTime("15 minutter");
+        Recipe teRecipe = new Recipe("TeOpskrift", "This is how you do it.", 1, "15 minutes");
 
         ArrayList<Ingredient> teList = new ArrayList<>();
         Ingredient teIngredientsSugar = new Ingredient("Vand", 0);
@@ -54,20 +46,11 @@ public class SimpleTest {
         teList.add(teIngredientsMelis);
         teRecipe.setIngredientsList(teList);
 
-        //display data using arrayList
+        //display data from arrayList
         for (Ingredient ingredient : teList) {
             System.out.println("Ingredient: " + ingredient.name + " (Calories: " + ingredient.calories + ")");
         }
-
-        System.out.println("-------------------");
-
-        System.out.println("Name: " + teRecipe.getName() + " "
-                + ", Instructions: " + teRecipe.getInstructions() + " "
-                + ", Numberofportions: " + teRecipe.getNumberOfPortions() + " "
-                + ", CookingTime: " + teRecipe.getCookingTime() + " "
-                + ", Ingrediens: " + teRecipe.getIngredientsList().toString());
     }
-
     public static void blankLine(){
         System.out.println(" ");
     }
