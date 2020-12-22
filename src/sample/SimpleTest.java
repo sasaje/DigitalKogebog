@@ -55,16 +55,16 @@ public class SimpleTest {
         //objects to check methods
         Ingredient citron = new Ingredient("Citron", 5);
         citron.richOnCaloeries();
-
+        blankLine();
         Ingredient ryeBread = new Ingredient("Rye Bread", 100);
         ryeBread.richOnCaloeries();
-
+        blankLine();
         Ingredient chocolate = new Ingredient("Chocolate", 105);
         chocolate.richOnCaloeries();
-
+        blankLine();
         IngredientNutritionContent citron2 = new IngredientNutritionContent("Citron", 55, 2, 2);
         citron2.goodAgainstColds();
-
+        blankLine();
         IngredientNutritionContent pølse = new IngredientNutritionContent("Pølse", 0,22,43);
         pølse.goodAgainstColds();
 

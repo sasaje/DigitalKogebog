@@ -18,6 +18,8 @@ public class IngredientNutritionContent extends Ingredient{
         this.cVitamin = cVitamin;
         this.magnesium = magnesium;
         this.kalk = kalk;
+
+        System.out.println("IngredientNutritionContent added: " + name);
     }
 
     public boolean goodAgainstColds() {
