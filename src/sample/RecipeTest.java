@@ -17,6 +17,10 @@ class RecipeTest {
 
     @org.junit.jupiter.api.Test
     void caloriesPerPortion() {
+        Recipe recipeTest1 = new Recipe("recipe1", "instructions" , 2, "1time");
 
+        ArrayList<Ingredient> ingredientArrayList = new ArrayList<>(); //reuse for all ingredient declarations
+        recipeTest1.addIngredients("Sugar", 100);
+        assertEquals(50, recipeTest1.caloriesPerPortion());
     }
 }
