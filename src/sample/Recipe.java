@@ -100,6 +100,7 @@ public class Recipe implements CalorieCalculator {
 //EXAMPLE ADD INGREDIENTS TO ARRAYLIST
     //addIngredients method
     public void addIngredients(String name, int calories){
+
         ingredientsList.add(new Ingredient(name, calories));
 
         //removes the [] from the arrayList output
@@ -111,15 +112,20 @@ public class Recipe implements CalorieCalculator {
 //EXAMPLE DISPLAY ARRAYLIST ITEMS
     public void showIngredients(){
         System.out.println("Ingredients you need to make " + name + ":");
-        for(int i = 0; i < ingredientsList.size(); i++){
+ /*       for(int i = 0; i < ingredientsList.size(); i++){
             int x=i+1;
             System.out.println("Ingredient(" + x + "): " + ingredientsList.get(i));
+        }
+*/
+        //afterwards line 114-117 are replaced by this following 120-122 these are the only changes, which solved the big ingredientList toString() issue!
+        for(Ingredient element : ingredientsList){
+            System.out.println("*" + element.getName());
         }
     }
 
     //GUI method only - shows the ingredients in GUI
     public void showIngredientsGUI(){
-        ingredientsList.forEach(System.out::println);
+        ingredientsList.forEach(System.out::println); // changed after showIngredient was changed
     }
 
     //show instructions

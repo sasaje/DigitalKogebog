@@ -94,7 +94,6 @@ public class SimpleTest {
         Recipe lemonWater = new Recipe("lemonWater", "instructions here", 0 , "0 minutter");
         lemonWater.addIngredients("Lemon Water",5);
         lemonWater.caloriesPerPortion(); //get the calories per portion of the recipe, this throws an exception
-
     }
     public static void blankLine(){
         System.out.println(" ");
