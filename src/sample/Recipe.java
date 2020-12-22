@@ -149,4 +149,22 @@ public class Recipe implements CalorieCalculator {
         }
         return totalCalories;
     }
+
+    public int caloriesPerPortion(){
+        int result = 0;
+
+        try{
+            result = caloriesTotal()/numberOfPortions;
+            if(result==0){
+                System.out.println(result);
+                System.out.println(name + "can't have 0 portions!");
+            }
+        }
+        catch(Exception e){
+            System.out.println("EXCEPTION ERROR : " + name + " can't have 0 portions!");
+        }
+
+        return result;
+    }
+
 }

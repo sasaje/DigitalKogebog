@@ -11,7 +11,10 @@ import java.util.ArrayList;
 public class SimpleTest {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to 'The Kogebog' your digital recipes.");
+
+        System.out.println("*************************************************");
+        System.out.println("* Welcome to 'The Kogebog' your digital recipes *");
+        System.out.println("*************************************************");
 
         blankLine();
 
@@ -82,7 +85,14 @@ public class SimpleTest {
         blankLine();
         Recipe water = new Recipe();
         water.addIngredients("water",0);
-        System.out.println("The total calories in a burger is: " + water.caloriesTotal());
+        System.out.println("The total calories in a water is: " + water.caloriesTotal());
+
+        blankLine();
+        System.out.println("******** CALORIES PER PORTION **********");
+        blankLine();
+        Recipe lemonWater = new Recipe("lemonWater", "instructions here", 0 , "0 minutter");
+        lemonWater.addIngredients("Lemon Water",5);
+        lemonWater.caloriesPerPortion();
 
     }
     public static void blankLine(){
