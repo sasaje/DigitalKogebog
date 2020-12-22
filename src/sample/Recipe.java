@@ -88,11 +88,12 @@ public class Recipe implements CalorieCalculator {
 
 //EXAMPLE OVERRIDING TOSTRING() //TODO override toString() get it to work
     //not working
-    public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("ArrayList").append(this.ingredientsList).append("\n");
-        return sb.toString();
+
+    @Override
+    public String toString() {
+        return ingredientsList.toString();
     }
+
 
     public int numberOfIngrediens(){
         // This will print the size of the stock list
@@ -123,11 +124,22 @@ public class Recipe implements CalorieCalculator {
         }
     }
 
+    //GUI method only - shows the ingredients in GUI
+    public void showIngredientsGUI(){
+        ingredientsList.forEach(t -> System.out.println(t));
+    }
+
     //show instructions
     public void showInstructions(){
         System.out.println("The instructions for making " + name + ":");
         String currentInstructions = this.getInstructions();
         System.out.println("- " + currentInstructions);
+    }
+
+    // GUI method only - show instructions in GUI
+    public String showInstructionsGUI(){
+        String currentInstructions = this.getInstructions();
+        return currentInstructions;
     }
 
 //EXAMPLE EXTRACT METHODS TO ANOTHER METHOD
@@ -177,4 +189,6 @@ public class Recipe implements CalorieCalculator {
 
         return result;
     }
+
+
 }
