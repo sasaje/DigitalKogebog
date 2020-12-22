@@ -11,6 +11,7 @@ package sample;
 public class Ingredient implements CalorieCalculator {
     String name; //navn
     int calories; //kalorier
+    Diet diet; //Diet
 
     public String getName() {
         return name;
