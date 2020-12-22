@@ -63,6 +63,7 @@ public class Recipe {
     //Constructors
     public Recipe(){
         //empty constructor
+//        System.out.println("Recipe " + name + " is added to the Kogebog");
     }
 
     public Recipe(String name, String instructions, int numberOfPortions, String cookingTime, ArrayList<Ingredient> ingredientsList) {
@@ -71,7 +72,14 @@ public class Recipe {
         this.numberOfPortions = numberOfPortions;
         this.cookingTime = cookingTime;
         this.ingredientsList = ingredientsList;
-        System.out.println("Ingredient is added: " + name);
-
+        System.out.println("Recipe " + name + " is added to the Kogebog");
     }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("ArrayList").append(this.ingredientsList).append("\n");
+        return sb.toString();
+    }
+
+
 }

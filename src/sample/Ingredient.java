@@ -36,5 +36,7 @@ public class Ingredient {
     public Ingredient(String name, double calories) {
         this.name = name;
         this.calories = calories;
+
+        System.out.println("Ingredient " + name + " added.");
     }
 }

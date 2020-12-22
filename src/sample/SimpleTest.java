@@ -13,6 +13,8 @@ public class SimpleTest {
     public static void main(String[] args) {
         System.out.println("Welcome to 'The Kogebog' your digital recipes.");
 
+        blankLine();
+
         //declare the Recipe objects
         Recipe glasurRecipe = new Recipe();
         glasurRecipe.setName("GlasurOpskrift");
@@ -54,10 +56,12 @@ public class SimpleTest {
 
         //display data using arrayList
         for (Ingredient ingredient : teList) {
-            System.out.println("IngredientName: " + ingredient.name);
-            System.out.println("IngredientCalories: " + ingredient.calories);
-            System.out.println("-------------------");
+            System.out.println("Ingredient: " + ingredient.name + " (Calories: " + ingredient.calories + ")");
         }
+
+        System.out.println("-------------------");
+
+        System.out.println("THIS" + teList.toString());
 
         System.out.println("name: " + teRecipe.getName() + " "
                 + ", name: " + teRecipe.getInstructions() + " "
@@ -66,8 +70,7 @@ public class SimpleTest {
                 + ", ingrediens: " + teRecipe.getIngredientsList().toString());
     }
 
-
-    public void blankLine(){
-        System.out.println("\n");
+    public static void blankLine(){
+        System.out.println(" ");
     }
 }
